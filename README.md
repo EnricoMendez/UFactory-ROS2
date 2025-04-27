@@ -25,6 +25,65 @@ First ensure that the Ubuntu Universe repository is enabled.
 sudo apt install software-properties-common
 sudo add-apt-repository universe
 ```
+![image](https://github.com/user-attachments/assets/55497ea2-e78a-4cfc-bb91-ef937b1863d4)
+
+
+Now add the ROS 2 GPG key with apt.
+
+```
+sudo apt update &&sudo apt install curl -y
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+```
+
+
+
+Then add the repository to your sources list.
+```
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+```
+
+3. Install ROS packages
+Update your apt repository caches after setting up the repositories.
+```
+sudo apt update
+```
+
+ROS 2 packages are built on frequently updated Ubuntu systems. It is always recommended that you ensure your system is up to date before installing new packages.
+```
+sudo apt upgrade
+```
+
+Desktop Install (Recommended): ROS, RViz, demos, tutorials.
+```
+sudo apt install ros-humble-desktop
+```
+
+Install additional dependencies commonly used with ROS2:
+
+```
+sudo apt install -y python3-argcomplete python3-colcon-common-extensions 
+sudo apt install python3-rosdep
+```
+
+4. Test the ROS installation 
+
+Set up your environment by sourcing the following file.
+```
+source /opt/ros/humble/setup.bash
+```
+
+If you installed ros-humble-desktop above you can try some examples.
+In one terminal, source the setup file and then run a C++ talker:
+
+```
+source /opt/ros/humble/setup.bash
+ros2 run demo_nodes_cpp talker
+```
+In another terminal source the setup file and then run a Python listener:
+```
+source /opt/ros/humble/setup.bash
+ros2 run demo_nodes_py listener
+```
 
 ### 2. Install Moveit 2 and gazebo ros pkgs
 In a new terminal after installing ROS Humble, execute:
