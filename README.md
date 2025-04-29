@@ -6,7 +6,7 @@ In these tutorials, the distribution of ROS2 'Humble' will be used, although the
 ### 1. Download ROS2
 To download ROS humble follow the instructions form [ROS2 doc](https://docs.ros.org/en/humble/index.html)
 
-Or follow the [ROS2 installation tutorial](https://github.com/EnricoMendez/UFactory-ROS2/blob/main/tutorials/ROS2_installation.md) of this repo.
+Or follow the [ROS2 installation tutorial](https://github.com/EnricoMendez/UFactory-ROS2/blob/main/tutorials/ROS2_Humble_installation.md) of this repo.
 
 ### 2. Install Moveit 2 and gazebo ros pkgs
 In a new terminal after installing ROS Humble, execute:
