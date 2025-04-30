@@ -134,6 +134,7 @@ ros2 launch xarm_api lite6_driver.launch.py robot_ip:=192.168.0.11
 
 Then, on a new terminal:
 ```
+cd ~/dev_ws/
 source /opt/ros/humble/setup.bash
 source install/setup.bash
 ```
