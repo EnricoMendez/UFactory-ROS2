@@ -8,7 +8,7 @@ To download ROS Humble follow the instructions from [ROS2 doc](https://docs.ros.
 
 Or follow the [ROS2 installation tutorial](https://github.com/EnricoMendez/UFactory-ROS2/blob/main/tutorials/ROS2_Humble_installation.md) of this repo.
 
-### 2. Install Moveit 2 and gazebo ros pkgs
+### 2. Install Moveit 2
 In a new terminal after installing ROS Humble, execute:
 ```bash
 sudo apt install ros-humble-moveit
