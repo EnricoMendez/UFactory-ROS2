@@ -61,7 +61,6 @@ sudo apt install -y python3-argcomplete python3-colcon-common-extensions
 sudo apt install python3-rosdep
 sudo rosdep init
 rosdep update
-
 ```
 
 4. Test the ROS installation 
