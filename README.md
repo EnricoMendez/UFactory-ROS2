@@ -60,16 +60,18 @@ colcon build
 
 ### Additional requirements 
 
-In order to later be able to run the simulations, it is needed to download the table from gazebo simulations. For this, open gazebo running in a terminal:
+To later be able to run the simulations, it is necessary to download the table from the Gazebo simulations. For this, open the gazebo running in a terminal:
 
+```
 gazebo
+```
 
-Then the GUI will apear:
+Then the GUI will appear:
 
 ![image](https://github.com/user-attachments/assets/1eed49bf-a28d-4f2a-8aa9-43023444db8c)
 
 
-Go to the insert tab and wait for http://model.gazebo… to load
+Go to the Insert tab and wait for http://model.gazebo… to load
 
 ![image](https://github.com/user-attachments/assets/01475be4-d828-4627-aa6a-e94c24020ec4)
 
@@ -92,14 +94,14 @@ There are different ways you can use xarm:
 
 ### 1. Control real robot
 
-To control the U Lite 6 first thing to do is to launch the ufactory driver node adding as argument the ip from the robot you are working with, for example:
+To control the U Lite 6, first thing to do is to launch the ufactory driver node adding as an argument the IP of the robot you are working with, for example:
 
 ```
 ros2 launch xarm_api lite6_driver.launch.py robot_ip:=192.168.0.31
 ```
 > This will start the communication between ROS and the robot. 
 
-Then to enable the robot's joint you must run:
+Then, to enable the robot's join,t you must run:
 
 ```
 ros2 service call /ufactory/motion_enable xarm_msgs/srv/SetInt16ById "{id: 8, data: 1}"
