@@ -54,11 +54,14 @@ Desktop Install (Recommended): ROS, RViz, demos, tutorials.
 sudo apt install ros-humble-desktop
 ```
 
-Install additional dependencies commonly used with ROS2:
+Install additional dependencies commonly used with ROS2 and init rosdep:
 
 ```
 sudo apt install -y python3-argcomplete python3-colcon-common-extensions 
 sudo apt install python3-rosdep
+sudo rosdep init
+rosdep update
+
 ```
 
 4. Test the ROS installation 
