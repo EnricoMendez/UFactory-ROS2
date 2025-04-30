@@ -66,7 +66,7 @@ There are different ways you can use xarm:
 
 ### 1. Control real robot
 
-To control the U Lite 6, first thing to do is to launch the ufactory driver node adding as an argument the IP of the robot you are working with, for example:
+To control the U Lite 6, the first thing to do is to launch the ufactory driver node, adding as an argument the IP of the robot you are working with, for example:
 
 ```
 ros2 launch xarm_api lite6_driver.launch.py robot_ip:=192.168.0.31
@@ -79,14 +79,14 @@ Then, to enable the robot's join,t you must run:
 ros2 service call /ufactory/motion_enable xarm_msgs/srv/SetInt16ById "{id: 8, data: 1}"
 ```
 
-Then to move the robot using xarm you must set the robot in mode 0 and state 0.
+Then, to move the robot using Xarm, you must set the robot in mode 0 and state 0.
 
 ```
 ros2 service call /ufactory/set_mode xarm_msgs/srv/SetInt16 "{data: 0}"
 ros2 service call /ufactory/set_state xarm_msgs/srv/SetInt16 "{data: 0}"
 ```
 
-Finally you can now move the robot with linear motion with: `ros2 service call /ufactory/set_position xarm_msgs/srv/MoveCartesian "{pose: [x,y,z,y,p,r], speed: 50, acc: 500, mvtime: 0}" `
+Finally, you can now move the robot with linear motion with: `ros2 service call /ufactory/set_position xarm_msgs/srv/MoveCartesian "{pose: [x,y,z,y,p,r], speed: 50, acc: 500, mvtime: 0}" `
 
 Or with joint moves using: `ros2 service call /ufactory/set_servo_angle xarm_msgs/srv/MoveJoint "{angles: [j1,j2,j3,j4,j5,j6], speed: 0.35, acc: 10, mvtime: 0}"
 
