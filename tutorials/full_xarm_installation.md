@@ -120,9 +120,9 @@ Or with joint moves using: `ros2 service call /ufactory/set_servo_angle xarm_msg
 
 Here is a complete example of what can be done to move the robot
 
+#### Example
 
-# launch ufactory_driver_node:
-In one terminal run the UFactory driver node:
+Launch ufactory_driver_node, In one terminal, run the UFactory driver node:
 ```
 cd ~/dev_ws/
 source /opt/ros/humble/setup.bash
