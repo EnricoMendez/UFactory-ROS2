@@ -187,3 +187,66 @@ rosservice call /xarm/set_mode 2
 
 rosservice call /xarm/set_state 0
 ```
+# Move cobot from a script
+
+## Prerequisites
+
+To enable the gripper services needed to operate it, you must enable them in a config file. To edit them run:
+
+```
+cd dev_ws/
+nano src/xarm_ros2/xarm_api/config/xarm_params.yaml 
+```
+Then look for the following parameters and set them as `True`: 
+
+* open_lite6_gripper: true
+* close_lite6_gripper: true
+* stop_lite6_gripper: true
+
+> The parameters are at lines 29 to 31
+
+<img width="464" alt="image" src="https://github.com/user-attachments/assets/65d75093-aa5b-419d-a4ea-4abda32588da" />
+
+Now lets create a new pkg in `dev_ws`. First create the pkg with the following command:
+
+```
+cd ~/dev_ws/src/
+ros2 pkg create ulite6_move --build-type ament_python --node-name square_move
+cd ..
+colcon build
+```
+
+This will create a new pkg named `ulite6_move`, here we will code a script to move the robot. The first script will use to move the robot is [`square_move.py`](https://github.com/EnricoMendez/UFactory-ROS2/blob/main/codes/square_move.py) to copy it to your pkg run:
+
+```
+cd ~/dev_ws/src/ulite6_move/ulite6_move/
+curl -o square_move.py https://raw.githubusercontent.com/EnricoMendez/UFactory-ROS2/main/codes/square_move.py
+```
+
+Now build the workspace:
+
+```
+cd ~/dev_ws/
+colcon build
+```
+## Run square move
+
+To run `square_move` node you first need to launch the xarm driver in one terminal:
+
+```
+cd ~/dev_ws/
+source /opt/ros/humble/setup.bash
+source install/setup.bash
+ros2 launch xarm_api lite6_driver.launch.py robot_ip:=<robot_ip>
+```
+
+And then run `square_move` node on another terminal:
+
+```
+cd ~/dev_ws/
+source /opt/ros/humble/setup.bash
+source install/setup.bash
+ros2 run ulite6_move square_move
+```
+
+Note that the node already enables the joints and set the adequate mode and state so there is no need to run those commands from the terminal.
