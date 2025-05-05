@@ -207,7 +207,7 @@ Then look for the following parameters and set them as `True`:
 
 <img width="464" alt="image" src="https://github.com/user-attachments/assets/65d75093-aa5b-419d-a4ea-4abda32588da" />
 
-Now lets create a new pkg in `dev_ws`. First create the pkg with the following command:
+Now let's create a new pkg in `dev_ws`. First create the pkg with the following command:
 
 ```
 cd ~/dev_ws/src/
@@ -216,7 +216,7 @@ cd ..
 colcon build
 ```
 
-This will create a new pkg named `ulite6_move`, here we will code a script to move the robot. The first script will use to move the robot is [`square_move.py`](https://github.com/EnricoMendez/UFactory-ROS2/blob/main/codes/square_move.py) to copy it to your pkg run:
+This will create a new pkg named `ulite6_move`, here we will code a script to move the robot. The first script we will use to move the robot is [`square_move.py`](https://github.com/EnricoMendez/UFactory-ROS2/blob/main/codes/square_move.py) to copy it to your pkg run:
 
 ```
 cd ~/dev_ws/src/ulite6_move/ulite6_move/
@@ -249,4 +249,4 @@ source install/setup.bash
 ros2 run ulite6_move square_move
 ```
 
-Note that the node already enables the joints and set the adequate mode and state so there is no need to run those commands from the terminal.
+Note that the node already enables the joints and sets the adequate mode and state so there is no need to run those commands from the terminal.
