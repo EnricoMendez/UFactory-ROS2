@@ -43,7 +43,7 @@ git submodule update --init --remote
 Install dependencies
 
 ```bash
-source /opt/ros/humble/setup.bash
+source /opt/ros/$ROS_DISTRO/setup.bash
 cd ~/dev_ws/src/
 rosdep update
 rosdep install --from-paths . --ignore-src --rosdistro $ROS_DISTRO -y
