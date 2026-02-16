@@ -26,7 +26,7 @@ Inside your ROS workspace, execute:
 
 ```bash
 cd ~/dev_ws/src/
-git clone https://github.com/xArm-Developer/xarm_ros2.git --recursive -b humble
+git clone https://github.com/xArm-Developer/xarm_ros2.git --recursive -b $ROS_DISTRO
 ```
 > Note: if needed, install git running: `sudo apt install git`
 
