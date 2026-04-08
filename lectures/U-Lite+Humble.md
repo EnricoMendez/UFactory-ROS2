@@ -213,7 +213,7 @@ Now let's create a new pkg in `dev_ws`. First create the pkg with the following 
 cd ~/dev_ws/src/
 ros2 pkg create ulite6_move --build-type ament_python --node-name square_move
 cd ..
-colcon build
+colcon build --packages-select ulite6_move
 ```
 
 This will create a new pkg named `ulite6_move`, here we will code a script to move the robot. The first script we will use to move the robot is [`square_move.py`](https://github.com/EnricoMendez/UFactory-ROS2/blob/main/codes/square_move.py) to copy it to your pkg run:
@@ -227,7 +227,7 @@ Now build the workspace:
 
 ```
 cd ~/dev_ws/
-colcon build
+colcon build --packages-select ulite6_move
 ```
 ## Run square move
 
