@@ -97,8 +97,10 @@ source install/setup.bash
 ros2 run visual_cobot visual_control
 ```
 
+Now open and close your fist to control the robot's gripper.
+
 ## Activity
 Now the challenge is to get to fully control the robot with signs
 
 1. Modify `visual_control.py` so you can also turn off the gripper with a sign
-2. Modify `full_visual_control.py` so you can fully control the robot movement and gripper, the objective is to be able to pick and place a block using only your hands.
+2. Modify `visual_control.py` so you can fully control the robot movement and gripper, the objective is to be able to pick and place a block using only your hands.
