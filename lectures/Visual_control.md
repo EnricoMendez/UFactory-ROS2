@@ -46,6 +46,8 @@ v4l2-ctl --list-devices
 
 Then run `ros2 launch visual_cobot gesture_recognition.py video_device:='dev/video0'` change `dev/video0` if needed to the device you will be using.
 ```bash
-ros2 launch visual_cobot gesture_recognition.py video_device:='dev/video0'
+cd ~/dev_ws
+source instal/setup.bash
+ros2 launch visual_cobot gesture_recognition.launch.py video_device:='dev/video0'
 ```
 
