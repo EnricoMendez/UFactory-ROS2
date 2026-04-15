@@ -89,7 +89,7 @@ cd ~/dev_ws
 source install/setup.bash
 cd ~/dev_ws/src/visual_cobot/visual_cobot/
 source ~/dev_ws/src/visual_cobot/visual_cobot/mp_env/bin/activate
-python3 visual_control.py 
+python3 gesture_recognition.py 
 ```
 
 Terminal 3:
