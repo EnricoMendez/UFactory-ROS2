@@ -63,14 +63,20 @@ To use services you need:
 3. Call the service: `self.future = self.client.call_async(self.req)`
 4. Optional, wait for the service to finish: `rclpy.spin_until_future_complete(self, self.future)`
 
+* You can check if service has finish with `self.client.done()`
+
 How to get information from the services:
 
 * List of services: `ros2 service list`
-* About a service: `ros2 service type <srv_name>
+* About a service: `ros2 service type <srv_name>`
 * About a service type: `ros2 interface show <type_name>`
 
 ## Code review
 
 Let's review [this code](https://github.com/EnricoMendez/visual_cobot/blob/main/visual_cobot/visual_control.py)
 
+## Activity
 Now the challenge is to get to fully control the robot with signs
+
+1. Modify `visual_control.py` so you can also turn off the gripper with a sign
+2. Modify `full_visual_control.py` so you can fully control the robot movement and gripper, the objective is to be able to pick and place a block using only your hands.
