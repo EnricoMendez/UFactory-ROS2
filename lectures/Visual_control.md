@@ -1,6 +1,6 @@
 ## Prerequesites:
 
-If you have dependencies problems, follow: https://github.com/EnricoMendez/UFactory-ROS2/blob/main/lectures/Visual_control_alternative
+If you have dependencies problems, follow: https://github.com/EnricoMendez/UFactory-ROS2/blob/main/lectures/Visual_control_alternative.md
 
 Install mediapipe [(soucre)](https://mediapipe-studio.webapps.google.com/studio/demo/gesture_recognizer), usb-cam ros pkg and v4l-utils.
 
