@@ -75,7 +75,7 @@ How to get information from the services:
 
 Let's review [this code](https://github.com/EnricoMendez/visual_cobot/blob/main/visual_cobot/visual_control.py)
 
-To run the code use 3 terminals.
+To run the code use 4 terminals.
 Terminal 1:
 ```bash
 cd ~/dev_ws
@@ -87,12 +87,21 @@ Terminal 2:
 ```bash
 cd ~/dev_ws
 source install/setup.bash
-cd dev_ws/src/visual_cobot/visual_cobot/
+cd ~/dev_ws/src/visual_cobot/visual_cobot/
 source ~/dev_ws/src/visual_cobot/visual_cobot/mp_env/bin/activate
-ros2 launch visual_cobot gesture_recognition.launch.py video_device:='/dev/video0'
+python3 visual_control.py 
 ```
 
 Terminal 3:
+```bash
+ros2 run usb_cam usb_cam_node_exe --ros-args \
+  -p video_device:=/dev/video0 \
+  -p pixel_format:=yuyv \
+  -p image_width:=640 \
+  -p image_height:=480
+```
+
+Terminal 4:
 ```bash
 cd ~/dev_ws
 source install/setup.bash
