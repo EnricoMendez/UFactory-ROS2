@@ -3,6 +3,7 @@
 Install mediapipe [(soucre)](https://mediapipe-studio.webapps.google.com/studio/demo/gesture_recognizer), usb-cam ros pkg and v4l-utils.
 
 ```bash
+sudo apt update
 sudo apt install python3-pip  #Make sure you have pip
 pip3 install mediapipe
 sudo apt install ros-humble-usb-cam
