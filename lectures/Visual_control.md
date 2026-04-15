@@ -48,7 +48,7 @@ v4l2-ctl --list-devices
 Then run `ros2 launch visual_cobot gesture_recognition.py video_device:='/dev/video0'` change `dev/video0` if needed to the device you will be using.
 ```bash
 cd ~/dev_ws
-source instal/setup.bash
+source install/setup.bash
 ros2 launch visual_cobot gesture_recognition.launch.py video_device:='/dev/video0'
 ```
 ## About services
@@ -79,21 +79,21 @@ To run the code use 3 terminals.
 Terminal 1:
 ```bash
 cd ~/dev_ws
-source instal/setup.bash
+source install/setup.bash
 ros2 launch xarm_api lite6_driver.launch.py robot_ip:=192.168.0.11
 ```
 
 Terminal 2:
 ```bash
 cd ~/dev_ws
-source instal/setup.bash
+source install/setup.bash
 ros2 launch visual_cobot gesture_recognition.launch.py video_device:='/dev/video0'
 ```
 
 Terminal 3:
 ```bash
 cd ~/dev_ws
-source instal/setup.bash
+source install/setup.bash
 ros2 run visual_cobot visual_control
 ```
 
