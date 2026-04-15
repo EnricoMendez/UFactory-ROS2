@@ -45,10 +45,32 @@ v4l2-ctl --list-devices
 ```
 <img width="603" height="108" alt="image" src="https://github.com/user-attachments/assets/49aa6ca7-58d0-4ed8-983f-5aabbfd841bc" />
 
-Then run `ros2 launch visual_cobot gesture_recognition.py video_device:='dev/video0'` change `dev/video0` if needed to the device you will be using.
+Then run `ros2 launch visual_cobot gesture_recognition.py video_device:='/dev/video0'` change `dev/video0` if needed to the device you will be using.
 ```bash
 cd ~/dev_ws
 source instal/setup.bash
-ros2 launch visual_cobot gesture_recognition.launch.py video_device:='dev/video0'
+ros2 launch visual_cobot gesture_recognition.launch.py video_device:='/dev/video0'
 ```
+## About services
 
+To use services you need:
+1. Create a client: `self.client = slef.create_client(<srv_type>, <srv_name>)
+2. Wait for service:
+   ```
+   while not self.client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('service not available, waiting again...')
+   ```
+3. Call the service: `self.future = self.client.call_async(self.req)`
+4. Optional, wait for the service to finish: `rclpy.spin_until_future_complete(self, self.future)`
+
+How to get information from the services:
+
+* List of services: `ros2 service list`
+* About a service: `ros2 service type <srv_name>
+* About a service type: `ros2 interface show <type_name>`
+
+## Code review
+
+Let's review [this code](https://github.com/EnricoMendez/visual_cobot/blob/main/visual_cobot/visual_control.py)
+
+Now the challenge is to get to fully control the robot with signs
