@@ -14,6 +14,7 @@ Then, create a pkg with which we will work this sesion:
 ```bash
 cd ~/dev_ws/src/
 git clone https://github.com/EnricoMendez/visual_cobot.git
+cd ~/dev_ws
 colcon build --packages-select visual_cobot
 ```
 
