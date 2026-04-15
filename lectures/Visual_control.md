@@ -71,9 +71,31 @@ How to get information from the services:
 * About a service: `ros2 service type <srv_name>`
 * About a service type: `ros2 interface show <type_name>`
 
-## Code review
+## Try the code 
 
 Let's review [this code](https://github.com/EnricoMendez/visual_cobot/blob/main/visual_cobot/visual_control.py)
+
+To run the code use 3 terminals.
+Terminal 1:
+```bash
+cd ~/dev_ws
+source instal/setup.bash
+ros2 launch xarm_api lite6_driver.launch.py robot_ip:=192.168.0.11
+```
+
+Terminal 2:
+```bash
+cd ~/dev_ws
+source instal/setup.bash
+ros2 launch visual_cobot gesture_recognition.launch.py video_device:='/dev/video0'
+```
+
+Terminal 3:
+```bash
+cd ~/dev_ws
+source instal/setup.bash
+ros2 run visual_cobot visual_control
+```
 
 ## Activity
 Now the challenge is to get to fully control the robot with signs
