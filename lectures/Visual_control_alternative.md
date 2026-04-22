@@ -36,6 +36,23 @@ If you want to test mediapipe independently on your browser, go to: https://medi
 
 [Python guide.](https://developers.google.com/mediapipe/solutions/vision/gesture_recognizer/python)
 
+Create a venv to use mediapipe:
+
+```bash
+cd ~/dev_ws/src/visual_cobot/visual_cobot/
+sudo apt install python3.10-venv
+python3 -m venv mp_env
+```
+
+Then activate the environment and install mediapipe on it:
+
+```bash
+source ~/dev_ws/src/visual_cobot/visual_cobot/mp_env/bin/activate
+pip install mediapipe
+pip install numpy==1.26.4
+```
+
+
 ## Test your installation
 
 First check which camera you'll be using, run:
@@ -45,12 +62,6 @@ v4l2-ctl --list-devices
 ```
 <img width="603" height="108" alt="image" src="https://github.com/user-attachments/assets/49aa6ca7-58d0-4ed8-983f-5aabbfd841bc" />
 
-Then run `ros2 launch visual_cobot gesture_recognition.launch.py video_device:='/dev/video0'` change `dev/video0` if needed to the device you will be using.
-```bash
-cd ~/dev_ws
-source install/setup.bash
-ros2 launch visual_cobot gesture_recognition.launch.py video_device:='/dev/video0'
-```
 ## About services
 
 To use services you need:
