@@ -8,6 +8,14 @@ This script converts an input image into detected contours, scales those contour
 
 ## 1. Install dependencies
 
+Download the script: from [source](https://github.com/EnricoMendez/UFactory-ROS2/blob/main/codes/route_gen.py)
+
+Or from bash
+
+``` bash
+wget https://raw.githubusercontent.com/EnricoMendez/UFactory-ROS2/main/codes/route_gen.py
+```
+
 Create and activate a Python environment if needed:
 
 ```bash
