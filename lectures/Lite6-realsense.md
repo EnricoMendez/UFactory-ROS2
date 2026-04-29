@@ -77,7 +77,7 @@ The package has two main nodes.
 The `segmentation` node subscribes to the RealSense color image:
 
 ```bash
-/camera/camera/color/image_rect_raw
+/camera/camera/color/image_raw
 ```
 
 It converts the image from BGR to HSV and segments the red block using two HSV ranges, because red wraps around the HSV hue limits.
@@ -96,7 +96,7 @@ The topic `/segmented_img` is a binary image where white pixels correspond to th
 The `object_pose_estimator` node synchronizes:
 
 ```bash
-/camera/camera/color/image_rect_raw
+/camera/camera/color/image_raw
 /camera/camera/aligned_depth_to_color/image_raw
 /camera/camera/color/camera_info
 /segmented_img
