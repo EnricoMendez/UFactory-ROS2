@@ -140,7 +140,11 @@ G-code: logo.gcode
 
 Open `logo_contours.png` first to verify that the detected paths look correct before using the generated G-code.
 
-## 8. Troubleshooting
+## 8. Executing path
+
+Copy the content from the `.gcode` file and paste it in the gcode ufactory interace. Then simulate the path, check there are no visible collisions and the run your code.
+
+## 9. Troubleshooting
 
 ### No contours found
 
