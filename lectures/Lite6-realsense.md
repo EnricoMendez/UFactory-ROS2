@@ -1,4 +1,5 @@
 # Pose estimation and block pick
+<img width="1322" height="688" alt="image" src="https://github.com/user-attachments/assets/eb0ab8a7-8693-4d4b-bfc2-2829410e8bd9" />
 
 ## Prerequisites
 
