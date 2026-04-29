@@ -32,8 +32,10 @@ Then install dependencies and build the package.
 ```bash
 cd ~/dev_ws/
 source /opt/ros/humble/setup.bash
-rosdep update
-rosdep install --from-paths src --ignore-src --rosdistro humble -y
+sudo apt update
+sudo apt install ros-humble-realsense2-camera
+sudo apt install ros-humble-librealsense2*
+sudo apt install ros-humble-librealsense2-*
 colcon build --packages-select pose_estimation_cobot
 source install/setup.bash
 ```
