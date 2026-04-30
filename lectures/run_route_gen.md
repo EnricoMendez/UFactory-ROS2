@@ -47,11 +47,11 @@ python3 route_gen.py
 
 This creates:
 
-```text
-logo.gcode
-logo_points.csv
-logo_contours.png
-```
+
+- `logo.gcode`
+- `logo_points.csv`
+- `logo_contours.png`
+
 
 ## 4. Run with a custom image and output files
 
