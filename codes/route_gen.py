@@ -1,3 +1,11 @@
+# Author: Enrico Mendez
+# Date: 29 Abril 2026
+# Description: Converts an input image into simplified contour paths and generates
+#              incremental G-code for a drawing robot. The script thresholds the
+#              image, cleans small artifacts, extracts and simplifies contours,
+#              scales them to a user-defined drawing area, exports the path points
+#              to CSV, creates a contour preview image, and writes the final
+#              G-code file for robot execution.
 
 import argparse
 import csv
