@@ -1,6 +1,6 @@
 # How to run `route_gen.py`
 
-Alternative: run the colab notebook: https://colab.research.google.com/drive/1Y9_t0Kk85ugLs6h-XPk71hx7_5xUiwYG?usp=share_link
+>Alternative: run the colab notebook: https://colab.research.google.com/drive/1Y9_t0Kk85ugLs6h-XPk71hx7_5xUiwYG?usp=share_link
 
 This script converts an input image into detected contours, scales those contours to millimeters, and generates:
 
